@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/waterloo-reviewers/static/css/main.31d6cfe0.css",
+    "main.js": "/waterloo-reviewers/static/js/main.07d27920.js",
+    "index.html": "/waterloo-reviewers/index.html",
+    "main.07d27920.js.map": "/waterloo-reviewers/static/js/main.07d27920.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.07d27920.js"
+  ]
+}

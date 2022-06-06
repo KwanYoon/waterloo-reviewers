@@ -1,3 +1,3 @@
 # Waterloo Reviewers
 
-Kwan, Diyar, and Jaden reviews eatery in the Waterloo area.
+Kwan, Diyar, and Jaden review eateries in the Waterloo area.

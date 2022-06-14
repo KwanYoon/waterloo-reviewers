@@ -29,8 +29,8 @@ const Searchbar = () => {
             <input className="search-text-box" value={userInput} placeholder="Find eateries here" onFocus={e => setShowSearchResults(true)} onBlur={e => setShowSearchResults(false)} onChange={e => (handleChange(e.target.value))}/>
             {
                 showSearchResults ? (searchResults.length > 0 || userInput.length === 0 ? searchResults.map((post) => (
-                                        <div key={post.name}>
-                                            <p>{post.name + " " + post.rating}</p>
+                                        <div key={post.key}>
+                                            <p>{post.name}</p>
                                         </div>)) :
                                         <p>Sorry, it looks like we haven't reviewed what you're looking for!</p>
     ) : null

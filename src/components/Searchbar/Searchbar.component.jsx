@@ -31,7 +31,7 @@ const Searchbar = () => {
     return (
         <div className="main">
             <img className="search-icon" src={SearchIcon} alt=""/>
-            <input className="search-text-box" value={userInput} placeholder="Search restaurants, cafes, etc" onFocus={e => setShowSearchResults(true)} onBlur={e => setTimeout(handleBlur, 100)} onChange={e => (handleChange(e.target.value))}/>
+            <input className="search-text-box" value={userInput} placeholder="Search restaurants, cafes, etc" onFocus={e => setShowSearchResults(true)} onBlur={e => setTimeout(handleBlur, 1000)} onChange={e => (handleChange(e.target.value))}/>
             {
                 showSearchResults ? (searchResults.length > 0 || userInput.length === 0 ? searchResults.map((post) => (
                                         <div className="blog-list-item" key={post.key}>

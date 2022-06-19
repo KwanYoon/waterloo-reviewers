@@ -5,8 +5,11 @@ import "./HomePage.styles.scss";
 const HomePage = () => {
   return (
     <div className="homepage">
-      <h1>Waterloo Reviewers</h1>
-      <Searchbar />
+
+      <h1 className="title">Waterloo Reviewers</h1>
+      <div className="searchbar">
+        <Searchbar />
+      </div>
     </div>
   );
 }

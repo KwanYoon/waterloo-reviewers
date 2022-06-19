@@ -3,48 +3,53 @@ $primary-color: rgb(0, 0, 0);
 
 .main {
     font: 100% $font-stack;
-    position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 50px;
-    max-width: 750px;
-    left: 35%;
-}
+    position: relative;
+    align-content: center;
+    justify-content: center;
 
-.search-icon {
-    position: absolute;
-    top: 6px;
-    left: 8px;
-    width: 14px;
-  }
+    // Search magnifying glass
+    .search-icon {
+        position: absolute;
+        top: 6px;
+        left: 8px;
+        width: 14px;
+    }
 
-.search-text-box {
-    color: $primary-color;
-    border: 1px solid grey;
-    border-radius: 5px;
-    height: 20px;
-    width: 100%;
-    padding: 2px 23px 2px 30px;
-    outline: 0;
-    background-color: white;
-}
+    .search-text-box {
+        color: $primary-color;
+        font-size: large;
 
-.search-text-box:hover, .search-text-box:focus {
-    border: 1.5px solid #009688;
-    background-color: white;
-}
+        border: 1px solid #ced4da;
+        border-radius: 20px;
+        height: 40px;
+        width: 50vw;
+
+        margin: 0px 5% 0px;
+        padding: 2px 30px 2px 0px;
+        outline: 0;
+        background-color: white;
+    }
+
+    .search-text-box:hover, .search-text-box:focus {
+        border: 1.5px solid #495057;
+        background-color: white;
+    }
+
+    // X-icon to clear all text out of search-text-box
+    .clear-icon {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        width: 10px;
+        padding: 2px;
+        cursor: pointer;
+    }
     
-.clear-icon {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    width: 10px;
-    padding: 2px;
-    cursor: pointer;
-}
-
-.clear-icon:hover {
-    border: 0.5px solid grey;
-    border-radius: 8px;
-    background-color: #f5f5f5;
+    .clear-icon:hover {
+        border: 0.5px solid grey;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+    }
 }

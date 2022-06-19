@@ -4,6 +4,7 @@ import { Reviews } from "../../data/Reviews";
 import "./Searchbar.styles.scss";
 import SearchIcon from "./Images/search-icon.png";
 import ClearIcon from "./Images/clear-icon.png";
+import { Link } from "react-router-dom";
 
 const Searchbar = () => {
     const [userInput, setUserInput] = useState("");
@@ -23,23 +24,28 @@ const Searchbar = () => {
         setSearchResults(getMatchedResults(text));
     }
 
+    function handleBlur() {
+        setShowSearchResults(false); 
+    }
+    
     return (
         <div className="main">
             <img className="search-icon" src={SearchIcon} alt=""/>
-            <input className="search-text-box" value={userInput} placeholder="Find eateries here" onFocus={e => setShowSearchResults(true)} onBlur={e => setShowSearchResults(false)} onChange={e => (handleChange(e.target.value))}/>
+            <input className="search-text-box" value={userInput} placeholder="Search restaurants, cafes, etc" onFocus={e => setShowSearchResults(true)} onBlur={e => setTimeout(handleBlur, 1000)} onChange={e => (handleChange(e.target.value))}/>
             {
                 showSearchResults ? (searchResults.length > 0 || userInput.length === 0 ? searchResults.map((post) => (
-                                        <div key={post.key}>
-                                            <p>{post.name}</p>
+                                        <div className="blog-list-item" key={post.key}>
+                                            <Link to={"/blogs/" + post.key }>{post.name}</Link>
                                         </div>)) :
-                                        <p>Sorry, it looks like we haven't reviewed what you're looking for!</p>
-    ) : null
-            }
-            {
-                userInput.length > 0 ? <img className="clear-icon" src={ClearIcon} alt="" onClick={() => handleChange("")}/> : null
+                                        <p>Sorry, it looks like we haven't reviewed what you're looking for!</p>) : null
             }
         </div>
     )
 }
 
 export default Searchbar;
+/*
+{
+                userInput.length > 0 ? <img className="clear-icon" src={ClearIcon} alt="" onClick={() => handleChange("")}/> : null
+            }
+*/

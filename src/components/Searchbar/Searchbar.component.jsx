@@ -11,14 +11,7 @@ const Searchbar = () => {
     const navigate = useNavigate();
     const [userInput, setUserInput] = useState("");
     const [searchResults, setSearchResults] = useState(Reviews);
-
-    function getMatchedResults(inputText)
-    {
-        // Eventually we will find results that are within Levenshtein distance to the input
-        return Reviews.filter(review => {
-            const reviewName = review.name.toLowerCase();
-            return reviewName.includes(inputText.toLowerCase())});
-    }
+    const [searchResultsExist, setSearchResultsExist] = useState(false);
 
     const onSearch = (searchItem) => {
         setUserInput(searchItem.name);
@@ -26,37 +19,53 @@ const Searchbar = () => {
         navigate("/blogs/" + searchItem.key);
     }
 
-    function handleChange(text) {
+    const getMatchedResults = () => {
+        return Reviews.filter((item) => {
+            const searchTerm = userInput.toLowerCase();
+            const fullName = item.name.toLowerCase();
+
+            return (
+                searchTerm &&
+                fullName.includes(searchTerm)
+        )});
+    }
+
+    const handleChange = (text) => {
         setUserInput(text);
-        setSearchResults(getMatchedResults(text));
+        const matchedResults = Reviews.filter((item) => {
+            const searchTerm = text.toLowerCase();
+            const fullName = item.name.toLowerCase();
+
+            return (
+                searchTerm.length > 0 &&
+                fullName.includes(searchTerm)
+        )});
+
+        setSearchResults(matchedResults);
+
+        if (matchedResults.length > 0) {
+            setSearchResultsExist(true);
+        } else {
+            setSearchResultsExist(false);
+        }
     }
     
     return (
         <div className="main">
             <div className="search-inner">
-                <input className="search-text-box" value={userInput} placeholder="Search restaurants, cafes, etc" onChange={e => (handleChange(e.target.value))}/>
+                <input className={searchResultsExist ? "search-text-box-results" : "search-text-box-no-results"} value={userInput} placeholder="Search restaurants, cafes, etc" onChange={e => (handleChange(e.target.value))}/>
             </div>
             <div className="dropdown">
-                {Reviews
-                .filter((item) => {
-                const searchTerm = userInput.toLowerCase();
-                const fullName = item.name.toLowerCase();
-
-                return (
-                    searchTerm &&
-                    fullName.includes(searchTerm) &&
-                    fullName !== searchTerm
-                );
-                })
+                {getMatchedResults()
                 .slice(0, 10)
-                .map((item) => (
-                <div
-                    onClick={() => onSearch(item)}
-                    className="dropdown-row"
-                    key={item.key}
-                >
-                    {item.name}
-                </div>
+                .map((item, i, {length}) => (
+                    <div
+                        onClick={() => onSearch(item)}
+                        className={length - 1 === i ? "final-dropdown-row" : "dropdown-row"}
+                        key={item.key}
+                    >
+                        {item.name}
+                    </div>
                 ))}
             </div>
         </div>

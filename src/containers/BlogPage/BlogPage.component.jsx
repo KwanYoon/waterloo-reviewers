@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "./BlogPage.styles.scss";
-import Navbar from "./../../components/Navbar/Navbar.component"
 import { Reviews } from '../../data/Reviews';
 
 const BlogPage = () => {
@@ -18,7 +17,6 @@ const BlogPage = () => {
 
   return (
     <div>
-      <Navbar />
       <h1>{review.name}</h1>
       {review.ratings.map(rating => 
         <div>

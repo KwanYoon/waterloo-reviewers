@@ -21,14 +21,20 @@ export const Reviews = [
         "description": "mmm",
       },
     ],
+    "location": [
+      {
+        "latitude": 43.49968,
+        "longitude": -80.53046,
+      },
+    ],
     "images": {
       "main": WENDYS_MAIN,
       "food": "",
     }
   },
   {
-    "key": "panda-express",
-    "name": "Panda Express",
+    "key": "shinwa-asian-cuisine",
+    "name": "Shinwa Asian Cuisine",
     "ratings": [
       {
         "name": "Kwan",
@@ -46,14 +52,20 @@ export const Reviews = [
         "description": "Love China",
       },
     ],
+    "location": [
+      {
+        "latitude": 43.47228,
+        "longitude": -80.53791,
+      }
+    ],
     "images": {
       "main": WENDYS_MAIN,
       "food": "",
     }
   },
   {
-    "key": "sowons",
-    "name": "Sowon's",
+    "key": "sowon-korean-dining",
+    "name": "Sowon Korean Dining",
     "ratings": [
       {
         "name": "Kwan",
@@ -69,6 +81,12 @@ export const Reviews = [
         "name": "Jaden",
         "score": 8,
         "description": "Love chicken",
+      },
+    ],
+    "location": [
+      {
+        "latitude": 43.47193,
+        "longitude": -80.53892,
       },
     ],
     "images": {

@@ -10,7 +10,7 @@ const AboutUsPage = () => {
             <div className="about-us-flex-container">
                 <div className="about-us-profile-modal">
                     <div className="about-us-profile-image">
-                        <img src={ProfileImgJaden} className="about-us-profile-image-inner"/>
+                        <img alt="Jaden" src={ProfileImgJaden} className="about-us-profile-image-inner"/>
                     </div>
                     <div className="about-us-profile-bio">
                         <h3>Jaden Chang</h3>
@@ -20,7 +20,7 @@ const AboutUsPage = () => {
                 
                 <div className="about-us-profile-modal">
                     <div className="about-us-profile-image">
-                        <img src={ProfileImgDiyar} className="about-us-profile-image-inner"/>
+                        <img alt="Diyar" src={ProfileImgDiyar} className="about-us-profile-image-inner"/>
                     </div>
                     <div className="about-us-profile-bio">
                         <h3>Diyar Yasin</h3>
@@ -30,7 +30,7 @@ const AboutUsPage = () => {
                 
                 <div className="about-us-profile-modal">
                     <div className="about-us-profile-image">
-                        <img src={ProfileImgKwan} className="about-us-profile-image-inner"/>
+                        <img alt="Kwan" src={ProfileImgKwan} className="about-us-profile-image-inner"/>
                     </div>
                     <div className="about-us-profile-bio">
                         <h3>Kwan Yoon</h3>

@@ -1,0 +1,27 @@
+@mixin media() {
+  @media (min-width: 1000px) {
+      @content;
+  }
+}
+
+.blogs-page {
+  .blogs-page-title {
+    font-size: 100px;
+    height: 250px;
+    text-align: center;
+    background-size: cover;
+    padding-top: 100px;
+  }
+  
+  .blogs-section {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0px 60px 0px 60px;
+    gap: 30px;
+    margin: 0 auto;
+  
+    @include media {
+      grid-template-columns: 33% 33% 33%;
+    }
+  }
+}

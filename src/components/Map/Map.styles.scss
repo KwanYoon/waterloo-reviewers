@@ -1,0 +1,17 @@
+.map {
+    position: absolute;
+    top: 200px;
+    align-self: center;
+    border: 10px solid white;
+
+    border-radius: 4px;
+    .map-review-spot {
+        cursor: pointer;
+        background-color: red;
+
+        .map-review-spot-icon {
+            height: 32px;
+            width: auto;
+        }
+    }
+}

@@ -1,14 +1,14 @@
 import React from "react";
 import Searchbar from "./../../components/Searchbar/Searchbar.component.jsx"
 import "./HomePage.styles.scss";
-import Navbar from './../../components/Navbar/Navbar.component';
+import Map from './../../components/Map/Map.component.jsx';
 
 const HomePage = () => {
   return (
     <div className="homepage">
-      <Navbar />
       <h1 className="title">Waterloo Reviewers</h1>
       <Searchbar className="searchbar" />
+      <Map className="map"/>
     </div>
   );
 }

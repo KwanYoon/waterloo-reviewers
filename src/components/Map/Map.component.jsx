@@ -1,11 +1,11 @@
 import React from 'react';
-import GoogleMapRreact from 'google-map-react';
+import GoogleMapReact from 'google-map-react';
 import "./Map.styles.scss";
-import {Reviews} from "./../../data/Reviews.js";
+import { Reviews } from "./../../data/Reviews.js";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import MapMarkerIcon from "./images/map-marker.webp";
-import MapModal from "./../MapModal/MapModal.component";
+import MapModal from "./../../components/MapModal/MapModal.component";
 
 const Map = () => {
     const [coordinates, setCoordinates] = useState({lat: 43.48384539232072, lng: -80.52679937827578});
@@ -14,7 +14,7 @@ const Map = () => {
 
     return (
         <div className='map'>
-            <GoogleMapRreact
+            <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDsAvs8wKyCHVuN5k-N6QA0iBRa9pDgBRo' }}
                 center={coordinates}
                 defaultZoom={14}
@@ -45,7 +45,7 @@ const Map = () => {
                             </div>
                         ))))}
 
-            </GoogleMapRreact>
+            </GoogleMapReact>
         </div>
     );
 }

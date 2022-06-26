@@ -1,7 +1,7 @@
 import React from "react";
 import Searchbar from "./../../components/Searchbar/Searchbar.component.jsx"
 import "./HomePage.styles.scss";
-import Map from './../../components/Map/Map.component.jsx';
+import Map from "./../../components/Map/Map.component";
 
 const HomePage = () => {
   return (

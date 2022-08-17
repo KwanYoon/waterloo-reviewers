@@ -18,7 +18,7 @@ const BlogPage = () => {
   return (
     <div>
       <h1>{review.name}</h1>
-      {review.ratings.map(rating => 
+      {review.ratings.map((rating, i) => 
         <div>
           <h2>{rating.name}</h2>
           <h3>{rating.score}</h3>

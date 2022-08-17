@@ -4,6 +4,8 @@ export const Reviews = [
   {
     "key": "wendys",
     "name": "Wendy's",
+    "address": "560 King St N, Waterloo, ON N2L 6L3",
+    "phoneNumber": "(519) 746-9554",
     "ratings": [
       {
         "name": "Kwan",
@@ -35,6 +37,8 @@ export const Reviews = [
   {
     "key": "shinwa-asian-cuisine",
     "name": "Shinwa Asian Cuisine",
+    "address": "160 University Ave W, Waterloo, ON N2L 3E9",
+    "phoneNumber": "(519) 588-7777",
     "ratings": [
       {
         "name": "Kwan",
@@ -66,6 +70,8 @@ export const Reviews = [
   {
     "key": "sowon-korean-dining",
     "name": "Sowon Korean Dining",
+    "address": "170 University Ave W, Waterloo, ON N2L 3E9",
+    "phoneNumber": "(519) 208-5678",
     "ratings": [
       {
         "name": "Kwan",

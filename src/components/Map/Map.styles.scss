@@ -3,15 +3,43 @@
     top: 200px;
     align-self: center;
     border: 10px solid white;
-
     border-radius: 4px;
+
     .map-review-spot {
         cursor: pointer;
-        background-color: red;
+
+        .parent {
+            position: absolute;
+            height: 32px;
+            width: 32px;
+            border: 1px solid black;
+            z-index: 10;
+
+            
+
+            .testing {
+                display: none;
+
+            }
+        }
 
         .map-review-spot-icon {
             height: 32px;
             width: auto;
+        }
+
+        .map-review-spot-icon:hover {
+            height: 48px;
+            
+        }
+
+        .parent #child-div-toggle {
+            display: none;
+        }
+
+        .parent--show #child-div-toggle {
+            display: block;
+            height: 48px;
         }
     }
 }

@@ -24,7 +24,7 @@ const AboutUsPage = () => {
                     </div>
                     <div className="about-us-profile-bio">
                         <h3>Diyar Yasin</h3>
-                        A big sweet tooth who loves ice cream, pastries, and the occasional boba
+                        300KG
                     </div>
                 </div>
                 

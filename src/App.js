@@ -10,7 +10,7 @@ import BlogsPage from './containers/BlogsPage/BlogsPage.component';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar className="navbar"/>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/blogs" element={<BlogsPage />} />
